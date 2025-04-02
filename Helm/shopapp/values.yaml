@@ -1,0 +1,11 @@
+replicaCount: 2
+appName: shopapp
+imagePullPolicy: Always
+containerPort: 5173
+image_repository: your-docker-repo/shopapp
+service:
+  enabled: true
+  type: LoadBalancer
+  port: 80
+  targetPort: 5173
+  protocol: TCP
